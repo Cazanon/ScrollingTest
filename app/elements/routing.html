@@ -1,0 +1,26 @@
+<script src="../bower_components/page/page.js"></script>
+<script>
+	window.addEventListener('WebComponentsReady', function() {
+		if (window.location.port === '') {  // if production
+			page.base(app.baseUrl.replace(/\/$/, ''));
+		}
+
+		app.baseUrl = app.baseUrl || '/';
+
+		page(app.baseUrl, function() {
+			app.route = 'home';
+		});
+
+		// 404
+		page('*', function() {
+			console.log('Page not found');
+			page.redirect(app.baseUrl);
+		});
+
+		// add #! before urls
+		// page({
+		// 	hashbang: true
+		// });
+
+	});
+</script>

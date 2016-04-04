@@ -1,0 +1,52 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="scroll-content">
+	<template>
+
+		<style is="custom-style">
+			:host{ diplay: block; }
+			#mainContent { 
+				display: flex; 
+				flex-direction: column;
+				background-color: green; 
+				height: 70%; 
+				overflow: auto;
+			}
+		</style>
+
+		<div id="mainContent">
+			<template is="dom-repeat" items="{{_toArray(elements)}}" as="element">      
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+				<div>{{element.name}}</div><br/>
+			</template>
+		</div>
+		
+	</template>
+	<script src="scroll-content.js"></script>
+</dom-module>
