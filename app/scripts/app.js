@@ -11,10 +11,11 @@
 	});
 
 	var _toArray = function(obj) {
-        return Object.keys(obj).map(function(key) {
+        return Object.keys(obj).map(function(key, idx) {
             return {
-                name: key,
-                value: obj[key]
+            	id 		: idx,
+                name	: key,
+                value	: obj[key]
             };
         });
     };

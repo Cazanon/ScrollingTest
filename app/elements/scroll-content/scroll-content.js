@@ -8,8 +8,13 @@
 			elements: {
 				type: Object,
 				notify: true
+			},
+			selectedElement : {
+				type	: Number,
+				value	: -1,
+				notify	: true
 			}
 		}
-		
+
 	});
 })(Polymer); 

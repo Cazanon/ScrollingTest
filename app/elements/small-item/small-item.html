@@ -16,11 +16,15 @@
 				box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 				margin: 5%;				
     			padding: 3% 6%;	
-			};
+			};	
+			:host(.iron-selected){
+				background-color: black;
+				color: white;
+			};		
 		</style>
-
+		
 		<div>
-			{{description}}
+			{{element.name}}
 		</div>
 
 	</template>

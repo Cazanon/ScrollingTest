@@ -12,8 +12,8 @@
 <body unresolved>
 	<span id="browser-sync-binding"></span>
 	<template is="dom-bind" id="app">
-		<header-bar elements={{days}}></header-bar>	
-		<scroll-content elements={{days}}></scroll-content>	
+		<header-bar elements={{days}} selected-element={{route}}></header-bar>	
+		<scroll-content elements={{days}} selected-element={{route}}></scroll-content>	
 	</template>
 	<script src="bower_components/firebase/firebase.js"></script>
 	<script src="scripts/app.js"></script>

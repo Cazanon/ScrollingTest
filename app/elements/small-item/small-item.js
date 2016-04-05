@@ -5,10 +5,24 @@
 		is: 'small-item',
 
 		properties: {
-			elements: {
-				type: Object,
-				notify: true
+			element: {
+				type	: Object,
+				notify	: true
+			},
+			selected: {
+				type				: Boolean,
+				value				: false,
+				notify				: true,
+				reflectToAttribute	: true
 			}
+		},
+
+		listeners : {
+			'tap': 'onTap'
+		},
+
+		onTap : function(){
+			this.fire('selectItem',this.element.id);
 		}
 		
 	});

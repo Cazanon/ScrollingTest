@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../../elements/small-item/small-item.html">
 
 <dom-module id="header-bar">
@@ -7,21 +8,31 @@
 		<style is="custom-style">
 			:host{ diplay: block; }
 			#mainContent { 
-				display: flex; 
+				/*display: flex; 
 				flex-direction: row;
-				justify-content: space-around;
+				justify-content: space-around;*/
 				/*flex-wrap: wrap;*/
 				align-items: center;
 				background-color: #79BD9A; 
 				height: 30%; 
 				overflow: auto;
-			}
+			};
+			--paper-tab : {
+				opacity: 0.9; 
+				background-color: #CFF09E;
+				cursor: move;
+				transition: all 400ms ease-in-out;
+    			padding: 2% 5%;	
+    			margin: 2%;		
+			};
 		</style>
 
 		<div id="mainContent">
-			<template is="dom-repeat" items="{{elements}}">      
-				<small-item description="{{item.name}}"></small-item>
-			</template>
+			<paper-tabs selected="{{selectedElement}}" attrForSelected="id" scrollable>
+				<template is="dom-repeat" items="{{elements}}">    
+					<paper-tab id="[[item.id]]">{{item.name}}</paper-tab>
+				</template>
+			</paper-tabs>
 		</div>
 
 		
