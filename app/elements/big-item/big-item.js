@@ -2,7 +2,7 @@
 	'use strict';
 
 	Polymer({
-		is: 'scroll-content',
+		is: 'big-item',
 
 		properties: {
 			elements: {

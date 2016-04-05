@@ -1,21 +1,23 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<dom-module id="small-item">
+<dom-module id="big-item">
 	<template>
 
 		<style is="custom-style">
 			:host{ 
 				opacity: 0.9; 
-				background-color: #CFF09E;
+				background-color: #0B486B;
 				cursor: pointer;
 				transition: all 400ms ease-in-out;
-    			padding: 2% 5%;	
-    			margin: 2%;		
-    		};
+				padding: 15%; 
+				margin: 2%;   
+				text-align: center;
+				color: white;
+			};
 			:host(:hover){
 				box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-				margin: 5%;				
-    			padding: 3% 6%;	
+				margin: 5%;       
+				padding: 16%; 
 			};
 		</style>
 
@@ -24,5 +26,5 @@
 		</div>
 
 	</template>
-	<script src="small-item.js"></script>
+	<script src="big-item.js"></script>
 </dom-module>

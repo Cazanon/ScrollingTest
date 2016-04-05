@@ -10,14 +10,16 @@
 				display: flex; 
 				flex-direction: row;
 				justify-content: space-around;
-				align-items: center;;
-				background-color: red; 
+				/*flex-wrap: wrap;*/
+				align-items: center;
+				background-color: #79BD9A; 
 				height: 30%; 
+				overflow: auto;
 			}
 		</style>
 
 		<div id="mainContent">
-			<template is="dom-repeat" items="{{_toArray(elements)}}">      
+			<template is="dom-repeat" items="{{elements}}">      
 				<small-item description="{{item.name}}"></small-item>
 			</template>
 		</div>

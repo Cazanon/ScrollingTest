@@ -8,42 +8,15 @@
 			#mainContent { 
 				display: flex; 
 				flex-direction: column;
-				background-color: green; 
+				background-color: #3B8686; 
 				height: 70%; 
 				overflow: auto;
 			}
 		</style>
 
 		<div id="mainContent">
-			<template is="dom-repeat" items="{{_toArray(elements)}}" as="element">      
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
-				<div>{{element.name}}</div><br/>
+			<template is="dom-repeat" items="{{elements}}" as="element"> 
+				<big-item description={{element.name}}></big-item>     
 			</template>
 		</div>
 		
