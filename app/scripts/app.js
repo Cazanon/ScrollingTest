@@ -4,6 +4,7 @@
 	var app = document.querySelector('#app');
 	var firebaseRef = new Firebase("https://todiet.firebaseio.com/");
 
+	app.route = 0;
 	app.baseUrl = '/';
 
 	firebaseRef.child('days').on('value', function(snapshot){		

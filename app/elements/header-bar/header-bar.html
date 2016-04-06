@@ -17,18 +17,20 @@
 				height: 30%; 
 				overflow: auto;
 			};
-			--paper-tab : {
-				opacity: 0.9; 
-				background-color: #CFF09E;
-				cursor: move;
-				transition: all 400ms ease-in-out;
-    			padding: 2% 5%;	
-    			margin: 2%;		
+			:root{				
+				--paper-tab : {
+					background-color: #374140;
+					color: white;
+					/*cursor: move;
+					transition: all 400ms ease-in-out;
+	    			padding: 2% 5%;	
+	    			margin: 2%;		*/
+				};
 			};
 		</style>
 
 		<div id="mainContent">
-			<paper-tabs selected="{{selectedElement}}" attrForSelected="id" scrollable>
+			<paper-tabs selected="{{selectedElement}}" attrForSelected="id">
 				<template is="dom-repeat" items="{{elements}}">    
 					<paper-tab id="[[item.id]]">{{item.name}}</paper-tab>
 				</template>
