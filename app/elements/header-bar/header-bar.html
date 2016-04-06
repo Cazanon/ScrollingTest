@@ -27,12 +27,17 @@
 	    			margin: 2%;		*/
 				};
 			};
+			a{
+				color: white;
+			}
 		</style>
 
 		<div id="mainContent">
 			<paper-tabs selected="{{selectedElement}}" attrForSelected="id">
 				<template is="dom-repeat" items="{{elements}}">    
-					<paper-tab id="[[item.id]]">{{item.name}}</paper-tab>
+					<paper-tab id="[[item.id]]" link>
+						<a data-route="{{item.id}}" href="{{item.id}}">{{item.name}}</a>
+					</paper-tab>
 				</template>
 			</paper-tabs>
 		</div>

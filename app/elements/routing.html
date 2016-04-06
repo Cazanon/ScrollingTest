@@ -1,6 +1,8 @@
 <script src="../bower_components/page/page.js"></script>
 <script>
 	window.addEventListener('WebComponentsReady', function() {
+		
+		//page.base('/#!');
 		if (window.location.port === '') {  // if production
 			page.base(app.baseUrl.replace(/\/$/, ''));
 		}
@@ -11,6 +13,12 @@
 			app.route = 0;
 		});
 
+		page('/:element', function(ctx) {
+			//page.show('')
+			app.route = ctx.params.element;
+			console.log('Parametros ',ctx.params.element);
+		});
+
 		// 404
 		page('*', function() {
 			console.log('Page not found');
@@ -18,9 +26,10 @@
 		});
 
 		// add #! before urls
-		// page({
-		// 	hashbang: true
-		// });
+		page({
+			hashbang: false
+		});
+
 
 	});
 </script>
