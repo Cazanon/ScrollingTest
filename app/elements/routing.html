@@ -2,7 +2,8 @@
 <script>
 	window.addEventListener('WebComponentsReady', function() {
 		
-		//page.base('/#!');
+		var WEEK_DAYS = 7;
+
 		if (window.location.port === '') {  // if production
 			page.base(app.baseUrl.replace(/\/$/, ''));
 		}
@@ -14,22 +15,19 @@
 		});
 
 		page('/:element', function(ctx) {
-			//page.show('')
-			app.route = ctx.params.element;
-			console.log('Parametros ',ctx.params.element);
+			//console.log(ctx.params.element);
+			param = ctx.params.element;
+			param < WEEK_DAYS ? app.route = param : page.redirect(app.baseUrl);
 		});
 
-		// 404
 		page('*', function() {
-			console.log('Page not found');
+			//console.log('404 Not Found');
 			page.redirect(app.baseUrl);
 		});
 
-		// add #! before urls
 		page({
 			hashbang: false
 		});
-
 
 	});
 </script>
