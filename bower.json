@@ -10,7 +10,8 @@
     "polymer": "Polymer/polymer#^1.2.0",
     "firebase": "^2.4.2",
     "paper-header-panel": "PolymerElements/paper-header-panel#^1.1.5",
-    "paper-scroll-header-panel": "PolymerElements/paper-scroll-header-panel#^1.0.15"
+    "paper-scroll-header-panel": "PolymerElements/paper-scroll-header-panel#^1.0.15",
+    "neon-animation": "PolymerElements/neon-animation#^1.2.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

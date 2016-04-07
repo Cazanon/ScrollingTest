@@ -1,5 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animated-pages.html">
+<link rel="import" href="../../bower_components/neon-animation/neon-animatable.html">
+<link rel="import" href="../../bower_components/neon-animation/animations/fade-in-animation.html">
+<link rel="import" href="../../bower_components/neon-animation/animations/fade-out-animation.html">
 <link rel="import" href="../day-content/day-content.html">
 
 
@@ -15,7 +18,7 @@
 				height: 70%; 
 				overflow: auto;
 			}
-			iron-pages{
+			neon-animated-pages{
 				height: 100%;
 				width: 100%;
 			}
@@ -26,11 +29,13 @@
 		</style>
 
 		<div id="mainContent">
-			<iron-pages selected="{{selectedElement}}">
-				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">	
-					<day-content id="[[item.id]]" name={{item.name}}></day-content>		      
+			<neon-animated-pages selected="{{selectedElement}}" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]">
+				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">
+						<neon-animatable>	
+					<day-content selected="{{selectedElement}}" id="[[item.id]]" name=[[item.name]]></day-content>		      
+							</neon-animatable>
 				</template>
-			</iron-pages>
+			</neon-animated-pages>
 		</div>
 		
 	</template>
