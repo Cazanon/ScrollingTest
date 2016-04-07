@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="../../elements/small-item/small-item.html">
 
 <dom-module id="header-bar">
@@ -8,41 +9,61 @@
 		<style is="custom-style">
 			:host{ diplay: block; }
 			#mainContent { 
-				/*display: flex; 
-				flex-direction: row;
-				justify-content: space-around;*/
-				/*flex-wrap: wrap;*/
-				align-items: center;
-				background-color: #79BD9A; 
 				height: 30%; 
-				overflow: auto;
-			};
-			:root{				
-				--paper-tab : {
-					background-color: #374140;
-					color: white;
-					/*cursor: move;
-					transition: all 400ms ease-in-out;
-	    			padding: 2% 5%;	
-	    			margin: 2%;		*/
+				background: url("../../images/header_bar_background.jpg");
+				background-repeat: no-repeat;
+    			background-attachment: fixed;
+    			background-position: center top; 
+			}
+			paper-tabs{
+				height: 80%;			
+				text-align: center;
+			}
+			:root{
+				--paper-tab-content : {
+					font-size: 30px;			
+				};
+				--paper-tab-content-unselected : {
+					font-size: 15px;					   
+				};	
+				--paper-tabs-selection-bar : {
+					display: none;
 				};
 			};
+			#tabImage{
+				width: 300px;
+    			height: 300px;
+    		}
 			a{
-				color: white;
+				text-decoration: none;
+				display: flex;
+			    justify-content:center;
+			    align-content:center;
+			    flex-direction:column; 
+			    transition: all 200ms ease-in-out;
+			}
+			a:hover{
+				text-decoration: none;
+				display: flex;
+			    justify-content:center;
+			    align-content:center;
+			    flex-direction:column; 
+			    font-size: 30px;
 			}
 		</style>
 
 		<div id="mainContent">
-			<paper-tabs selected="{{selectedElement}}" attrForSelected="id">
+			<paper-tabs selected="{{selectedElement}}" attr-for-selected="id">
 				<template is="dom-repeat" items="{{elements}}">    
-					<paper-tab id="[[item.id]]" link>
-						<a data-route="{{item.id}}" href="{{item.id}}">{{item.name}}</a>
+					<paper-tab id="[[item.id]]" link noink no-bar>
+						<a href="{{item.id}}">		
+						<!-- <iron-image id="tabImage" src="../../images/{{item.name}}.jpg" sizing="contain"></iron-image>					 -->
+							{{item.name}}
+						</a>							
 					</paper-tab>
 				</template>
 			</paper-tabs>
-		</div>
-
-		
+		</div>		
 
 	</template>
 	<script src="header-bar.js"></script>

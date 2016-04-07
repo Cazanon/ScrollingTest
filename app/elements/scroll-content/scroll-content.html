@@ -17,7 +17,7 @@
 
 		<div id="mainContent">
 			<iron-pages selected="{{selectedElement}}">
-				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">
+				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">				
 					<big-item id="[[item.id]]" description={{item.name}}></big-item>     
 				</template>
 			</iron-pages>
