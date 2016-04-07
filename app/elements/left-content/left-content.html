@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+
+<dom-module id="left-content">
+	<template>
+
+		<style is="custom-style">
+			:host{ 
+				display: block;
+				height: 100%;
+				width: 50%;
+				float: left;
+			};
+			#imgContainer {				
+				height: 100%;
+				width: 100%;
+			}
+			iron-image{
+				width : 100%;
+				height	: 100%;
+			}
+		</style>
+
+		<div id="imgContainer">
+			<iron-image sizing="cover" src="../../images/{{name}}Content.jpg"></iron-image>
+		</div>
+
+	</template>
+	<script src="left-content.js"></script>
+</dom-module>

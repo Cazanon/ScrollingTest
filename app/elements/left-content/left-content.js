@@ -2,12 +2,11 @@
 	'use strict';
 
 	Polymer({
-		is: 'big-item',
+		is: 'left-content',
 
 		properties: {
-			elements: {
-				type: Object,
-				notify: true
+			name: {
+				type: String
 			}
 		}
 		

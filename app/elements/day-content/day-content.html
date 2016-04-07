@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../right-content/right-content.html">
+<link rel="import" href="../left-content/left-content.html">
+
+<dom-module id="day-content">
+	<template>
+
+		<style is="custom-style">
+			:host{ 
+				display: block;
+				height: 100%;
+				width: 50%;	
+    		};	
+    		#container {				
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+		
+		<div id="container">
+			<left-content name={{name}}></left-content>
+			<right-content name={{name}}></right-content>    
+		</div>
+
+	</template>
+	<script src="day-content.js"></script>
+</dom-module>

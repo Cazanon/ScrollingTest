@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="right-content">
+	<template>
+
+		<style is="custom-style">
+			:host{ 
+				display: block;
+				height: 100%;
+				width: 50%;	
+				float: left;
+				display: flex;
+			    justify-content:center;
+			    align-content:center;
+			    flex-direction:column; 
+    		};	
+    		#container{
+    			font-size: 50px;
+				border: 2px solid black;
+				text-align: center;
+			    margin: 5%;
+			    padding: 5%;
+    		}
+		</style>
+		
+		<div id="container">
+			{{name}}
+		</div>
+
+	</template>
+	<script src="right-content.js"></script>
+</dom-module>

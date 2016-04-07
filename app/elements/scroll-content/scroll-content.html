@@ -1,5 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../day-content/day-content.html">
+
 
 <dom-module id="scroll-content">
 	<template>
@@ -13,12 +15,20 @@
 				height: 70%; 
 				overflow: auto;
 			}
+			iron-pages{
+				height: 100%;
+				width: 100%;
+			}
+			day-content{
+				height: 100%;
+				width: 100%;
+			}
 		</style>
 
 		<div id="mainContent">
 			<iron-pages selected="{{selectedElement}}">
-				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">				
-					<big-item id="[[item.id]]" description={{item.name}}></big-item>     
+				<template is="dom-repeat" items="{{elements}}" attrForSelected="id">	
+					<day-content id="[[item.id]]" name={{item.name}}></day-content>		      
 				</template>
 			</iron-pages>
 		</div>
