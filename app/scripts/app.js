@@ -15,7 +15,7 @@
         return Object.keys(obj).map(function(key, idx) {
             return {
             	id 		: idx,
-                name	: key,
+                name	: key.substring(2),
                 value	: obj[key]
             };
         });
