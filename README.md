@@ -1,2 +1,2 @@
-#To Diet
+#ScrollingTest
 ##App for testing scrolling animation with polymer
